@@ -34,8 +34,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left:
-    25px;
+    margin-left: 25px;
 }
 
 /* Link styles for accessibility */
@@ -51,62 +50,81 @@ a:focus {
 /* Paragraph styles */
 p {
     font-size: 1rem; /* Scalable unit for text */
+    color: #ffffff; /* White font color */
 }
 
 /* Hero image styles */
 .hero {
-    height: 60vh; /* Increased height for aesthetic */
+    height: 70vh; /* Increased height for aesthetics */
     background-image: url("../images/digital-marketing-meeting.jpg");
-    background-size: cover;
+    background-size: cover; /* Covers the entire container */
+    background-repeat: no-repeat; /* No repeat of the hero image */
     background-position: center;
 }
 
 /* Main content styles */
 .content-box {
-    display: flex; /* Use flexbox for layout */
-    background-color: #0072bb; /* Blue background */
-    margin-left: 20px; /* Small margin on the left */
-    padding: 20px; /* Padding inside the blue box */
-}
-
-.text-content {
-    flex-basis: 75%; /* Text takes up 3/4th of the box */
+    display: flex;
+    background-color: #0072bb;
+    margin: 20px;
     padding: 20px;
+    align-items: center; /* Center items vertically */
 }
 
 /* Image styles inside the content boxes */
 .content-box img {
-    max-width: 100%; /* Image scales with the container */
-    height: auto; /* Maintain aspect ratio */
-    margin: 0; /* Remove margin for alignment */
+    max-width: 100%; /* Ensures images scale down appropriately */
+    height: auto; /* Preserves aspect ratio */
+    margin-right: 20px; /* Margin to separate image from text */
+}
+
+/* Text content within content boxes */
+.text-content {
+    max-width: 50%;
+    display: block; /* Ensures text content does not wrap around the image */
+}
+
+/* Benefits section styles */
+.benefits {
+    padding: 20px;
+    background-color: #2589bd;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between child elements */
+    margin-bottom: 20px; /* Bottom margin for spacing */
 }
 
 /* Responsive media queries */
 @media (max-width: 768px) {
-    /* ... (no changes to the existing mobile styles) ... */
+    header, nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        height: 30vh;
+    }
 
     .content-box {
-        flex-direction: column; /* Stack image and text on mobile */
-    }
-}
-
-@media (min-width: 769px) {
-    .content-box {
-        /* Adjustments for tablet and desktop */
-        flex-direction: row; /* Keep image and text side by side */
+        flex-direction: column;
+        margin: 10px; /* Adjust margin for smaller screens */
     }
 
-    .online-reputation-management .content-box {
-        flex-direction: row-reverse; /* Flip the order for the second box */
+    .content-box img {
+        margin: 0 auto 20px; /* Center images on mobile */
     }
 
-    /* Benefits section alignment */
     .benefits {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 25%; /* Benefits take up 1/4th of the screen */
-        height: 100vh; /* Extend to the bottom of the viewport */
-        margin-left: 75%; /* Position to the right of the content boxes */
+        order: -1; /* Benefits section above content on mobile */
+        margin: 10px; /* Adjust margin for smaller screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
     }
 }
