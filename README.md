@@ -22,3 +22,4 @@ Contributions to this project are welcome. If you have ideas for further improve
 
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
+![image](https://github.com/wileland/c0de-refact0r/assets/142263841/3a393ebc-bbff-4fc3-afc4-8302b24f9fde)
