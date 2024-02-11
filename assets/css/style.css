@@ -21,7 +21,7 @@ header {
 }
 
 header h1 {
-    font-size: 3rem; /* scalable unit for desktops */
+    font-size: 3rem; /* Scalable unit for desktops */
 }
 
 header h1 .seo {
@@ -34,7 +34,8 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 25px;
+    margin-left:
+    25px;
 }
 
 /* Link styles for accessibility */
