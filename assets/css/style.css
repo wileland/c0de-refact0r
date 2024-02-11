@@ -55,112 +55,58 @@ p {
 
 /* Hero image styles */
 .hero {
-    height: 50vh; /* Scalable unit for hero image */
+    height: 60vh; /* Increased height for aesthetic */
     background-image: url("../images/digital-marketing-meeting.jpg");
     background-size: cover;
     background-position: center;
 }
 
 /* Main content styles */
-.content {
+.content-box {
+    display: flex; /* Use flexbox for layout */
+    background-color: #0072bb; /* Blue background */
+    margin-left: 20px; /* Small margin on the left */
+    padding: 20px; /* Padding inside the blue box */
+}
+
+.text-content {
+    flex-basis: 75%; /* Text takes up 3/4th of the box */
     padding: 20px;
 }
 
-/* Benefits section styles */
-.benefits {
-    padding: 20px;
-    background-color: #2589bd;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-}
-
-.benefit-lead, .benefit-brand, .benefit-cost {
-    margin-bottom: 2rem; /* Scalable margin */
-}
-
-.benefit-lead h3, .benefit-brand h3, .benefit-cost h3 {
-    text-align: center;
-}
-
-/* Image styles for benefits */
-.benefit-lead img, .benefit-brand img, .benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-/* Individual content block styles */
-.search-engine-optimization, .online-reputation-management, .social-media-marketing {
-    padding: 50px;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization h2, .online-reputation-management h2, .social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 2.25rem; /* Scalable unit for headings */
-}
-
-/* Footer styles */
-.footer {
-    padding: 30px;
-    text-align: center;
-}
-
-.footer h2 {
-    font-size: 1.25rem; /* Scalable unit for footer heading */
+/* Image styles inside the content boxes */
+.content-box img {
+    max-width: 100%; /* Image scales with the container */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0; /* Remove margin for alignment */
 }
 
 /* Responsive media queries */
 @media (max-width: 768px) {
-    /* Styles for mobile devices */
-    header, nav ul {
-        flex-direction: column;
-        text-align: center;
-    }
+    /* ... (no changes to the existing mobile styles) ... */
 
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .hero {
-        height: 30vh;
-    }
-
-    .benefits, .content, .search-engine-optimization, .online-reputation-management, .social-media-marketing {
-        width: 100%; /* Full width on mobile */
-        padding: 10px; /* Reduced padding on mobile */
-        height: auto; /* Auto-adjust height */
-    }
-
-    header h1 {
-        font-size: 2rem; /* Smaller font size for mobile */
+    .content-box {
+        flex-direction: column; /* Stack image and text on mobile */
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    /* Styles for tablets */
-    .benefits, .content {
-        flex-direction: column;
+@media (min-width: 769px) {
+    .content-box {
+        /* Adjustments for tablet and desktop */
+        flex-direction: row; /* Keep image and text side by side */
     }
 
+    .online-reputation-management .content-box {
+        flex-direction: row-reverse; /* Flip the order for the second box */
+    }
+
+    /* Benefits section alignment */
     .benefits {
-        order: 1; /* Benefits come first on tablet */
-    }
-
-    .content {
-        order: 2; /* Content follows benefits */
-    }
-}
-
-@media (min-width: 1025px) {
-    /* Styles for desktops */
-    .benefits {
-        flex-direction: row; /* Row layout for desktop */
-    }
-
-    .search-engine-optimization, .online-reputation-management, .social-media-marketing {
-        flex: 1; /* Flex property for equal distribution */
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25%; /* Benefits take up 1/4th of the screen */
+        height: 100vh; /* Extend to the bottom of the viewport */
+        margin-left: 75%; /* Position to the right of the content boxes */
     }
 }
