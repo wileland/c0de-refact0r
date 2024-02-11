@@ -1,4 +1,21 @@
-node_modules
+# Appending additional items to the .gitignore content
+additional_gitignore_content = """
+# Previously written rules
+*.png
+*.jpg
+# Common directories and files to ignore
+node_modules/
+dist/
+build/
+
+# Newly added files and directories to ignore
 package-lock.json
-.vscode
+.vscode/
 .DS_Store
+"""
+
+# Updating the .gitignore file with the new content
+with open(file_path, 'w') as file:
+    file.write(additional_gitignore_content)
+
+file_path
