@@ -128,3 +128,25 @@ p {
         font-size: 2rem; /* Smaller font size for mobile */
     }
 }
+
+/* Adjustments for rectangles and images */
+.content-box {
+    width: 75%; /* Increase the width of the blue rectangles by 15% */
+}
+
+.content-box img {
+    width: 90%; /* Make the images 90% wide inside their rectangles */
+}
+
+/* Resize pictures 2-4 to approximately 1/4th their size */
+.content-box:nth-child(n+2) img {
+    width: 25%; /* Make pictures 2-4 25% wide */
+}
+
+.fourth-rectangle {
+    width: 15%; /* Reduce the width of the fourth rectangle by 75% */
+    margin-top: 20px; /* Add margin to separate it from the last horizontal rectangle */
+    margin-left: 20px; /* Add left margin to match the margin of the other rectangles */
+    margin-right: 20px; /* Add right margin to match the margin of the other rectangles */
+    padding: 20px;
+}
