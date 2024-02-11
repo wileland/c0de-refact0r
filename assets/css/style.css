@@ -73,8 +73,9 @@ p {
 
 /* Image styles inside the content boxes */
 .content-box img {
-    max-width: 100%; /* Ensures images scale down appropriately */
-    height: auto; /* Preserves aspect ratio */
+    max-width: 50%; /* Reduce image width by 50% */
+    max-height: 50%; /* Reduce image height by 50% */
+    height: auto; /* Preserve aspect ratio */
     margin-right: 20px; /* Margin to separate image from text */
 }
 
@@ -134,17 +135,16 @@ p {
     width: 75%; /* Increase the width of the blue rectangles by 15% */
 }
 
-.content-box img {
-    width: 90%; /* Make the images 90% wide inside their rectangles */
+/* Headers in the three horizontal rectangles */
+.content-box h2 {
+    color: #ffffff; /* White font color */
+    font-size: 2rem; /* Double the font size */
+    margin-bottom: 20px; /* Add more spacing between header and section text */
 }
 
-/* Resize pictures 2-4 to approximately 1/4th their size */
-.content-box:nth-child(n+2) img {
-    width: 25%; /* Make pictures 2-4 25% wide */
-}
-
-.fourth-rectangle {
-    width: 15%; /* Reduce the width of the fourth rectangle by 75% */
+/* Adjustments for the fourth rectangle */
+main > section:nth-child(4) {
+    width: 10%; /* Adjust the width to fit the available space */
     margin-top: 20px; /* Add margin to separate it from the last horizontal rectangle */
     margin-left: 20px; /* Add left margin to match the margin of the other rectangles */
     margin-right: 20px; /* Add right margin to match the margin of the other rectangles */
